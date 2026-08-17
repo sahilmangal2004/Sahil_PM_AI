@@ -230,7 +230,7 @@ export const principles = [
   { n: "04", t: "Measure it", d: "If nothing changed, it wasn't really a solution." },
 ];
 
-const answers: Record<string, string> = {
+const answers = {
   who: "Sahil is a 2026 MANIT Bhopal graduate building toward Product Management through hands-on work across Product Operations, Data, Automation, QA and Business Operations.",
   why: "The short version: Sahil kept moving closer to the part of work where messy systems become clearer products. Chemical Engineering led to research and operations, then data, automation and Product Operations.",
   goeddie:
@@ -258,7 +258,7 @@ const answers: Record<string, string> = {
     "To improve a product like QuikyGo, I'd start where the operating data already hurts: fulfilment reliability and vendor data quality. Tighten validation at the point of entry, instrument the fulfilment funnel, then automate the repeated manual steps that show up in the reporting.",
   unknown:
     "I can answer from Sahil's documented portfolio, and I can help with general product, data and AI questions. Try asking about QuikyGo, GoEddie.ai, metrics, SQL, or PM interview prep.",
-};
+} as const;
 
 export function getAnswer(question: string): string {
   const n = question.toLowerCase();
