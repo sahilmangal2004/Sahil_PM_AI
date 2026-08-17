@@ -77,6 +77,12 @@
     scroll-behavior: smooth;
   }
 
+  section[id],
+  footer[id],
+  article[id] {
+    scroll-margin-top: 6.5rem;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
