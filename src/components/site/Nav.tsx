@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "./ThemeToggle";
+
 
 const links = [
   { href: "#work", label: "Work" },
@@ -60,21 +62,27 @@ export function Nav() {
           ))}
         </div>
 
-        <a
-          href="#ai"
-          data-cursor="ASK"
-          className="hidden rounded-full border border-primary/40 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground md:inline-flex"
-        >
-          Sahil AI
-        </a>
+        <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
+          <a
+            href="#ai"
+            data-cursor="ASK"
+            className="inline-flex rounded-full border border-primary/40 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            Sahil AI
+          </a>
+        </div>
 
-        <button
-          className="md:hidden"
-          aria-label="Toggle menu"
-          onClick={() => setOpen((value) => !value)}
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
+            aria-label="Toggle menu"
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
+
       </nav>
 
       {open && (

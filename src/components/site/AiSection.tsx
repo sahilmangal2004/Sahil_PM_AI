@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowUp, RotateCcw } from "lucide-react";
 import { getAnswer } from "@/lib/portfolio-data";
+import sahilAsset from "@/assets/sahil.png.asset.json";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
+
 
 type Message = { from: "user" | "ai"; text: string };
 
@@ -57,12 +59,21 @@ function Orb({ state }: { state: "idle" | "thinking" | "generating" }) {
         <span className="absolute bottom-0 left-1/2 size-1 -translate-x-1/2 rounded-full bg-foreground/60" />
       </div>
       <div
-        className="absolute inset-[36%] rounded-full bg-primary/25 backdrop-blur-sm transition-all duration-500"
+        className="absolute inset-[30%] overflow-hidden rounded-full border border-primary/40 bg-surface/60 backdrop-blur-sm transition-all duration-500"
         style={{
           transform: state === "thinking" ? "scale(1.08)" : "scale(1)",
           boxShadow: `0 0 ${state === "idle" ? 30 : 60}px color-mix(in oklab, var(--lime) 40%, transparent)`,
         }}
-      />
+      >
+        <img
+          src={sahilAsset.url}
+          alt="Sahil Mangal"
+          className="size-full object-cover object-top"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-primary/15 mix-blend-overlay" />
+      </div>
+
     </div>
   );
 }
