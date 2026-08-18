@@ -1,6 +1,7 @@
-import { ArrowUpRight, Github, Mail, Sparkles } from "lucide-react";
+import { ArrowUpRight, FileDown, Github, Mail, Sparkles } from "lucide-react";
 import { Magnetic } from "./Magnetic";
 import { Reveal } from "./Reveal";
+import { cvUrl } from "@/lib/portfolio-data";
 
 export function ContactSection() {
   return (
@@ -46,6 +47,16 @@ export function ContactSection() {
                 className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm transition-colors hover:border-primary/50 hover:text-primary"
               >
                 <Github size={16} /> GitHub <ArrowUpRight size={14} />
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a
+                href={cvUrl}
+                download
+                data-cursor="OPEN"
+                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm transition-colors hover:border-primary/50 hover:text-primary"
+              >
+                <FileDown size={16} /> Download CV
               </a>
             </Magnetic>
           </div>

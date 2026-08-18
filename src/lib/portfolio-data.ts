@@ -3,8 +3,10 @@ import gargiAsset from "@/assets/gargi.jpg.asset.json";
 import aminAsset from "@/assets/amin.jpg.asset.json";
 import ujjwalAsset from "@/assets/ujjwal.png.asset.json";
 import bharteshAsset from "@/assets/bhartesh.jpg.asset.json";
+import cvAsset from "@/assets/Sahil_Mangal_CV.pdf.asset.json";
 
 export const portrait = sahilAsset.url;
+export const cvUrl = cvAsset.url;
 
 export type Experience = {
   id: string;
