@@ -67,6 +67,16 @@ export function Hero() {
                 <Sparkles size={16} /> Talk to Sahil AI
               </a>
             </Magnetic>
+            <Magnetic>
+              <a
+                href={cvUrl}
+                download
+                data-cursor="OPEN"
+                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-primary/50 hover:text-primary"
+              >
+                <FileDown size={16} /> Download CV
+              </a>
+            </Magnetic>
           </div>
 
           <p className="mono-label mt-10">
