@@ -1,6 +1,7 @@
-import { ArrowUpRight, Github, Mail, Sparkles } from "lucide-react";
+import { ArrowUpRight, FileDown, Github, Mail, Sparkles } from "lucide-react";
 import { Magnetic } from "./Magnetic";
 import { Reveal } from "./Reveal";
+import { cvUrl } from "@/lib/portfolio-data";
 
 export function ContactSection() {
   return (

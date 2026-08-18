@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { ArrowDownRight, Sparkles } from "lucide-react";
+import { ArrowDownRight, FileDown, Sparkles } from "lucide-react";
 import { Magnetic } from "./Magnetic";
-import { portrait } from "@/lib/portfolio-data";
+import { portrait, cvUrl } from "@/lib/portfolio-data";
 
 const words = ["PRODUCT", "DATA", "AI", "AUTOMATION", "EXPERIMENTATION"];
 
