@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowUp, RotateCcw } from "lucide-react";
 import { getAnswer } from "@/lib/portfolio-data";
+import sahilAsset from "@/assets/sahil.png.asset.json";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
+
 
 type Message = { from: "user" | "ai"; text: string };
 
